@@ -254,7 +254,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0 20px 17px 0;
-    background-image: url('https://sadhost.neocities.org/images/tiles/gifbground-804-0004.gif');
+    background-image: url('../img/pink-background.gif');
     background-size: auto;
     text-align: center;
     text-shadow: 0.75px 0.75px rgb(255, 161, 194);
@@ -969,7 +969,7 @@
     }
   
     body {
-      background-image: url('https://sadhost.neocities.org/images/tiles/gifbground-804-0004.gif');
+      background-image: url('..img/pink-background.gif');
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
     }
@@ -1069,7 +1069,7 @@
     }
   
     body {
-      background-image: url('https://sadhost.neocities.org/images/tiles/gifbground-804-0004.gif');
+      background-image: url('..img/pink-background.gif');
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
     }
@@ -1179,7 +1179,7 @@
     }
   
     body {
-      background-image: url('https://sadhost.neocities.org/images/tiles/gifbground-804-0004.gif');
+      background-image: url('..img/pink-background.gif');
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
     }
