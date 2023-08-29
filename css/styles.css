@@ -140,8 +140,10 @@ nav a {
 .desktop a {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-evenly; */
   text-decoration: none;
-  width: 75px;
+  /* width: 75px;
+  height: 75px; */
 }
 
 a:link {
@@ -408,17 +410,18 @@ th {
 
 .desktop {
   display: block;
-  margin: 0 10px;
   /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center; */
+  padding: 12.5px 10px;
   color: rgb(255, 255, 255);
   font-size: 0.8em;
   font-family: 'MS Reference Sans Serif', sans-serif;
   text-shadow: 1px 1px #000;
   position: relative;
-  max-width: 75px;
+  width: 75px;
+  height: auto;
 }
 
 .mobile-header img {
@@ -430,21 +433,17 @@ th {
 
 .icons {
   list-style-type: none;
-  padding: 0;
+  /* padding: 0; */
   align-items: center;
-}
-
-
-
-.icons>li {
   display: flex;
   flex-direction: column;
-  width: 40px;
-  margin: 10px;
+  width: 100%;
+  height: 100%;
+  /* margin: 10px; */
   text-align: center;
 }
 
-.icons>li>img {
+.icons img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -453,18 +452,14 @@ th {
   height: 35px;
 }
 
-
-
 .desktop a:visited {
   color: rgb(255, 255, 255);
 }
 
-.desktop li:hover {
+.desktop a:hover {
   text-decoration: underline;
 
 }
-
-
 
 input[type="submit"] {
   padding: 5px;
