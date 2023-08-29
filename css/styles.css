@@ -5,18 +5,18 @@
 }
 
 @font-face {
-  font-family: "DeterminationSansWeb";
+  font-family: DeterminationSansWeb;
   src: url('../fonts/DeterminationSansWebRegular-369X.ttf');
 }
 
 @font-face {
-  font-family: "DeathMohawk";
+  font-family: DeathMohawk;
   src: url('../fonts/DeathMohawkPersonalUseRegular-8MlEM.otf');
 }
 
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  font-family: "DeterminationSansWeb";
+  font-family: DeterminationSansWeb, sans-serif;
   /* old gradient - background: linear-gradient(0deg, #f4f1f4 0%, #f5b6e8 100%); */
   background-image: var(--background-img);
   /* background-repeat: no-repeat; */
@@ -62,7 +62,7 @@ body {
 }
 
 @keyframes cloud-move {
-
+  
   from {
     transform: translate(0, 0);
   }
@@ -86,7 +86,7 @@ body {
 }
 
 .logo-text {
-  font-family: "DeathMohawk";
+  font-family: DeathMohawk, sans-serif;
   font-size: 100px;
   color: rgb(0, 0, 0);
   text-shadow: 2px 2px var(--pink-shadow);
@@ -130,18 +130,36 @@ nav {
   /* border-bottom: solid 1px pink; */
 }
 
-#nav__work {
-  width: 700px;
-}
-
-nav a,
-nav a:visited,
-nav a:link {
+nav a {
   /* font-family: "DeathMohawk"; */
   font-size: 1.1em;
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
+
+.desktop a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 75px;
+}
+
+a:link {
+  color: #4600F0
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: red;
+}
+
+nav a:visited, nav a:link {
+  font-size: 1.1em;
+  color: #000;
+  text-decoration: none;
+}
+
 
 .container {
   background: #222;
@@ -166,7 +184,7 @@ nav a:link {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-  padding: 132px 0 55px 0;
+  padding: 132px 0 55px;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
   border-image-slice: 171 57 57 515 fill;
@@ -175,14 +193,11 @@ nav a:link {
 .browser-frame::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   border-image: url('../img/netscape.png');
   border-image-slice: 171 57 57 515 fill;
   border-image-width: 170px 56px 57px 515px;
-  border-image-outset: 0px 0px 0px 0px;
+  border-image-outset: 0 0 0 0;
   border-image-repeat: repeat repeat;
   pointer-events: none;
 }
@@ -202,10 +217,13 @@ main {
   text-transform: uppercase;
 }
 
-
 #main-work-desktop {
   padding: 0 8px 17px 4px;
   overflow: auto;
+}
+
+header {
+  width: 100%;
 }
 
 #main-work-desktop header {
@@ -236,7 +254,7 @@ main {
     background-color: rgba(var(--green), 0.4);
     width: auto;
     min-height: auto;
-    padding: 15px 15px;
+    padding: 15px;
   }
 
   .fakeimg {
@@ -260,10 +278,6 @@ main {
   }
 }
 
-header {
-  width: 100%;
-}
-
 button {
   width: 100px;
   height: 50px;
@@ -278,11 +292,11 @@ h1 {
 }
 
 .h1-work {
-  margin: 15px 0 10px 0;
+  margin: 15px 0 10px;
 }
 
 .h1-contact {
-  margin: 35px 0 15px 0;
+  margin: 35px 0 15px;
 }
 
 .p-about {
@@ -325,12 +339,7 @@ th {
 
 .resize-handle {
   position: absolute;
-  width: 0px;
-  height: 0px;
-  right: 0;
-  bottom: 0;
-  top: auto !important;
-  left: auto !important;
+  inset: auto, 0, 0, auto !important;
   margin-top: -22px;
   margin-left: -22px;
   width: 20px;
@@ -342,11 +351,11 @@ th {
   height: 26px;
   background-color: rgb(192, 192, 192);
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-top: ridge 2px white;
-  font-family: 'MS Reference Sans Serif';
+  font-family: 'MS Reference Sans Serif', sans-serif;
 }
 
 .task {
@@ -356,7 +365,7 @@ th {
   left: 70px;
   font-weight: bolder;
   font-size: 12px;
-  font-family: 'MS Reference Sans Serif';
+  font-family: 'MS Reference Sans Serif', sans-serif;
   margin: 2px 5px;
   padding: 2px 10px;
   border: inset 2px;
@@ -383,7 +392,7 @@ th {
   user-select: none;
 }
 
-.startRest {
+.start-rest {
   border-top: ridge 2px white;
   border-left: ridge 2px white;
   border-bottom: ridge 2px black;
@@ -399,17 +408,24 @@ th {
 
 .desktop {
   display: block;
-  margin: 0px 10px;
+  margin: 0 10px;
   /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center; */
   color: rgb(255, 255, 255);
   font-size: 0.8em;
-  font-family: 'MS Reference Sans Serif';
-  text-shadow: 1px 1px #000000;
+  font-family: 'MS Reference Sans Serif', sans-serif;
+  text-shadow: 1px 1px #000;
   position: relative;
   max-width: 75px;
+}
+
+.mobile-header img {
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  object-fit: contain;
 }
 
 .icons {
@@ -418,12 +434,7 @@ th {
   align-items: center;
 }
 
-.desktop a {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  width: 75px;
-}
+
 
 .icons>li {
   display: flex;
@@ -442,9 +453,7 @@ th {
   height: 35px;
 }
 
-a:link {
-  color: #4600F0
-}
+
 
 .desktop a:visited {
   color: rgb(255, 255, 255);
@@ -455,17 +464,13 @@ a:link {
 
 }
 
-a:hover,
-a:focus {
-  text-decoration: underline;
-  color: red;
-}
+
 
 input[type="submit"] {
-  padding: 5px 5px;
+  padding: 5px;
   background-color: #4600F0;
   color: white;
-  text-shadow: 1px 1px #000000;
+  text-shadow: 1px 1px #000;
   border: solid;
   border-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -474,7 +479,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   /* transform: scale(1.1); */
-  filter: drop-shadow(0px 2px 1px red) invert(75%);
+  filter: drop-shadow(0 2px 1px red) invert(75%);
   border-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
@@ -492,7 +497,6 @@ input[type="submit"]:active {
   font-size: 45px;
   font-weight: bold;
   animation: colorchange 20s infinite alternate;
-  -webkit-animation: colorchange 20s infinite alternate;
 }
 
 @keyframes color-change {
@@ -561,14 +565,14 @@ input[type="submit"]:active {
   animation-timing-function: linear;
   animation-duration: 400ms;
   display: inline-block;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 @keyframes wobb {
 
   0%,
   100% {
-    transform: translateY(0px)
+    transform: translateY(0)
   }
 
   25% {
@@ -581,16 +585,8 @@ input[type="submit"]:active {
 }
 
 /* Pulse Grow */
-@-webkit-keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
-
 @keyframes hvr-pulse-grow {
   to {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
@@ -598,7 +594,6 @@ input[type="submit"]:active {
 .hvr-pulse-grow {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
@@ -607,27 +602,15 @@ input[type="submit"]:active {
 .hvr-pulse-grow:focus,
 .hvr-pulse-grow:active {
   text-decoration: underline;
-  -webkit-animation-name: hvr-pulse-grow;
   animation-name: hvr-pulse-grow;
-  -webkit-animation-duration: 0.15s;
   animation-duration: 0.15s;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 
 .mobile {
   display: none;
-}
-
-.mobile-header img {
-  height: 100%;
-  width: 100%;
-  vertical-align: top;
-  object-fit: contain;
 }
 
 .desktop-icons {
@@ -639,12 +622,12 @@ input[type="submit"]:active {
 }
 
 footer {
-  margin: 20px 0 35px 0;
+  margin: 20px 0 35px;
 }
 
 /* media queries */
 /* screen too small warning */
-@media screen and (max-width: 325px), (max-height: 330px) {
+@media screen and (width <= 325px), (height <= 330px) {
 
   .container,
   .browser-frame,
@@ -659,7 +642,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-image: var(--background-img);
   }
 
@@ -676,7 +658,7 @@ footer {
 }
 
 /* small mobile */
-@media (min-width: 325px) and (max-width: 425px) and (min-height: 330px) {
+@media (325px <= width <= 425px) and (height >= 330px) {
 
   .cloud,
   .cloud-2 {
@@ -689,7 +671,7 @@ footer {
   }
 
   td {
-    padding: 5px 5px;
+    padding: 5px;
   }
 
   .container,
@@ -714,7 +696,7 @@ footer {
     display: none;
   }
 
-  .logo-text:after {
+  .logo-text::after {
     content: 'Simeon';
   }
 
@@ -749,7 +731,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    margin: 2vh 0 0 0;
+    margin: 2vh 0 0;
     overflow: auto;
   }
 
@@ -765,7 +747,7 @@ footer {
 }
 
 /* medium mobile */
-@media (min-width: 426px) and (max-width: 632px) and (min-height: 330px) {
+@media (426px <= width <= 632px) and (height >= 330px) {
 
   .cloud,
   .cloud-2 {
@@ -778,7 +760,7 @@ footer {
   }
 
   td {
-    padding: 5px 5px;
+    padding: 5px;
   }
 
   .container,
@@ -802,7 +784,7 @@ footer {
     display: none;
   }
 
-  .logo-text:after {
+  .logo-text::after {
     content: 'Simeon';
   }
 
@@ -837,7 +819,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    margin: 15px 0 0 0;
+    margin: 15px 0 0;
     overflow: auto;
   }
 
@@ -853,7 +835,7 @@ footer {
 }
 
 /* medium tablet/desktop */
-@media (min-width: 633px) and (max-width: 850px) {
+@media (633px <= width <= 850px) {
   .container {
     width: 100%;
   }
@@ -865,7 +847,7 @@ footer {
 }
 
 /* landscape mode */
-@media (min-width: 633px) and (min-height: 330px) and (max-height: 735px) {
+@media (width >= 633px) and (330px <= height <= 735px) {
 
   .cloud,
   .cloud-2 {
@@ -900,7 +882,7 @@ footer {
     display: none;
   }
 
-  .logo-text:after {
+  .logo-text::after {
     content: 'Simeon';
   }
 
@@ -939,7 +921,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    margin: 15px 0 0 0;
+    margin: 15px 0 0;
     /* overflow: auto; */
 
   }
@@ -952,19 +934,19 @@ footer {
 }
 
 /* grid adjustments */
-@media (max-width: 1450px) {
+@media (width <= 1450px) {
   .grid-projects {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 1100px) {
+@media (width <= 1100px) {
   .grid-projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 851px) {
+@media (width <= 851px) {
   #main-work-desktop nav {
     width: 830px;
   }
