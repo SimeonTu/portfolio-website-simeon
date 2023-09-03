@@ -7,8 +7,8 @@
     <title>Contact</title>
     <link rel="site icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/snowflakes.css">
 </head>
 
@@ -65,116 +65,64 @@
         <div class="drag-handle"></div>
 
         <main>
-            <nav role="menubar">
-                <a class="hvr-pulse-grow" href="index.html" role="menuitem">Home</a>
-                <img src="img/jewelx.gif" width="24" alt="">
-                <a class="hvr-pulse-grow" href="about.html" role="menuitem">About me</a>
-                <img src="img/jewelx.gif" width="24" alt="">
-                <a class="hvr-pulse-grow" href="work.html" role="menuitem">Projects</a>
-                <img src="img/jewelx.gif" width="24" alt="">
-                <a class="hvr-pulse-grow" href="contact.html" role="menuitem">Contact</a>
-            </nav>
 
-            <h1 class="h1-contact">
-                Contact
-            </h1>
-
-            <div>
-                Simeon Tudzharov
-                <br>
-                Tel: <a href="tel:+7706099713">+7706099713</a><br>
-                Email: <a href="mailto:simeon.trv@gmail.com"> simeon.trv@gmail.com</a><br>
-                <a href="mailto:simeon.trv@gmail.com">Contact me</a>
+            <div class="nav-wrapper">
+                <nav role="menubar">
+                    <a class="hvr-pulse-grow" href="index.html" role="menuitem">Home</a>
+                    <img src="img/jewelx.gif" width="24" alt="">
+                    <a class="hvr-pulse-grow" href="about.html" role="menuitem">About me</a>
+                    <img src="img/jewelx.gif" width="24" alt="">
+                    <a class="hvr-pulse-grow" href="work.html" role="menuitem">Projects</a>
+                    <img src="img/jewelx.gif" width="24" alt="">
+                    <a class="hvr-pulse-grow" href="contact.html" role="menuitem">Contact</a>
+                </nav>
             </div>
-            <br>
-            <form action="temp" method="post" id="contact-form">
-                <div class="form-element">
-                    <label class="standard-label" for="contact-email">E-mail: </label>
-                    <input type="email" id="contact-email" required>
-                </div>
-                <div class="form-element">
-                    <label class="standard-label" for="contact-telephone">Telephone: </label>
-                    <input type="tel" id="contact-telephone">
-                </div>
-                <div class="form-element">
-                    <label class="standard-label" for="contact-message">Message: </label>
-                    <textarea maxlength="240" id="contact-message" required></textarea>
-                </div>
-                <input type="submit" value="Send message">
-            </form>
 
-            <footer>
-                <p>
-                    Find me on
-                </p>
-                <div>
-                    <a href="#"><img src="./img/footer/github.svg" alt="Github Link"></a>
-                    <a href="#"><img src="./img/footer/twitter.svg" alt="Twitter Link"></a>
-                    <a href="#"><img src="./img/footer/linkedin.svg" alt="Linkedin Link"></a>
+            <div class="main-content-wrapper">
+                <h1 class="h1-contact">
+                    Contact
+                </h1>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-div">
+                        <div>
+                            Simeon Tudzharov
+                            <br>
+                            Tel: <a href="tel:+7706099713">+7706099713</a><br>
+                            Email: <a href="mailto:simeon.trv@gmail.com"> simeon.trv@gmail.com</a><br>
+                            <a href="mailto:simeon.trv@gmail.com">Contact me</a>
+                        </div>
+                    </div>
+
+                    <div class="form-div">
+                        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+                            action="https://formspree.io/f/xpzgrdkz" method="post">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
+                                required="">
+                            <label for="message">Message</label>
+                            <textarea maxlength="240" rows="5" name="message" id="message"
+                                placeholder="Enter your message" required=""></textarea>
+                            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
                 </div>
-            </footer>
+
+                <footer>
+                    <p>
+                        Find me on
+                    </p>
+                    <div>
+                        <a href="https://github.com/SimeonTu" target="_blank"><img src="./img/footer/github.svg" alt="Github Link"></a>
+                        <a href="https://www.linkedin.com/in/simeon-tudzharov-b5155b16b/" target="_blank"><img src="./img/footer/linkedin.svg" alt="Linkedin Link"></a>
+                    </div>
+                </footer>
+            </div>
 
         </main>
-    </div>
-
-    <div class="mobile">
-
-        <div class="mobile-header">
-            <img id="mobile-small-header" src="img/netscape11.png" alt="">
-            <img id="mobile-medium-header" src="img/netscape2.png" alt="">
-        </div>
-
-        <main>
-            <nav role="menu">
-                <a class="hvr-pulse-grow nav-link" href="index.html" role="menuitem">Home</a>
-                <img src="img/jewelx.gif" width="24" alt="">
-                <a class="hvr-pulse-grow nav-link" href="about.html" role="menuitem">About me</a>
-                <img src="img/jewelx.gif" width="24" alt="">
-                <a class="hvr-pulse-grow nav-link" href="work.html" role="menuitem">Projects</a>
-                <img src="img/jewelx.gif" width="24" alt="">
-                <a class="hvr-pulse-grow nav-link" href="contact.html" role="menuitem">Contact</a>
-            </nav>
-            <h1 class="h1-contact">
-                Contact
-            </h1>
-
-            <div>
-                Simeon Tudzharov
-                <br>
-                Tel: <a href="tel:+7706099713">+7706099713</a><br>
-                Email: <a href="mailto:simeon.trv@gmail.com"> simeon.trv@gmail.com</a><br>
-                <a href="mailto:simeon.trv@gmail.com">Contact me</a>
-            </div>
-            <br>
-            <form action="test" method="post" id="contact-form-mobile">
-                <div class="form-element">
-                    <label class="standard-label" for="contact-email-mobile">E-mail: </label>
-                    <input type="email" id="contact-email-mobile" required>
-                </div>
-                <div class="form-element">
-                    <label class="standard-label" for="contact-telephone-mobile">Telephone: </label>
-                    <input type="tel" id="contact-telephone-mobile">
-                </div>
-                <div class="form-element">
-                    <label class="standard-label" for="contact-message-mobile">Message: </label>
-                    <textarea maxlength="240" id="contact-message-mobile" required></textarea>
-                </div>
-                <input type="submit" value="Send message">
-            </form>
-
-            <footer>
-                <p>
-                    Find me on
-                </p>
-                <div>
-                    <a href="#"><img src="./img/footer/github.svg" alt="Github Link"></a>
-                    <a href="#"><img src="./img/footer/twitter.svg" alt="Twitter Link"></a>
-                    <a href="#"><img src="./img/footer/linkedin.svg" alt="Linkedin Link"></a>
-                </div>
-            </footer>
-
-        </main>
-
     </div>
 
     <div class="taskbar">

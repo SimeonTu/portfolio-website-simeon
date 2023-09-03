@@ -7,6 +7,7 @@
     "alpha-value-notation": null,
     "property-no-vendor-prefix": null,
     "at-rule-no-vendor-prefix": null,
-    "value-no-vendor-prefix": null
+    "value-no-vendor-prefix": null,
+    "no-descending-specificity": null
   }
 }
