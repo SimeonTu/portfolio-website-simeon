@@ -249,11 +249,13 @@ main {
     box-sizing: border-box;
     margin: 0 2vw;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
 
   .grid-item {
+    display: flex;
+    flex-direction: column;
     border: solid 3px var(--green);
     background-color: var(--green-light);
     width: auto;
@@ -263,12 +265,12 @@ main {
 
   .fakeimg {
     border: solid 2px var(--green);
-    width: 200px;
+    width: 95%;
   }
 
   .grid-item h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
   }
 
   .grid-title {
@@ -278,8 +280,25 @@ main {
   }
 
   .grid-description {
-    font-size: 1em;
+    font-size: 1.5rem;
   }
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.project-links a {
+  text-decoration: none;
+}
+
+.project-links span {
+  color: rgb(150, 0, 0);
+  text-shadow: 2px 2px pink;
 }
 
 button {
@@ -496,6 +515,10 @@ th {
   margin-bottom: 3px;
   width: 37px;
   height: 35px;
+}
+
+a:visited {
+  color: #000;
 }
 
 .desktop a:visited {
@@ -979,13 +1002,13 @@ footer img {
 /* grid adjustments */
 @media (width <= 1450px) {
   .grid-projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (width <= 1100px) {
   .grid-projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
