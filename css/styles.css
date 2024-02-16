@@ -765,6 +765,34 @@ footer img {
 /* medium mobile */
 @media (width <= 632px) and (330px <= height) {
 
+  .container {
+    position: relative;
+    background: none;
+    resize: none;
+    overflow: auto;
+    width: auto;
+    height: auto !important;
+    font-size: 1.5em;
+  }
+
+  main {
+    box-sizing: border-box;
+    font-size: 23px;
+    width: 100%;
+    object-fit: contain;
+    overflow: auto;
+    padding: 0;
+    background-image: none;
+    /* border: 5px solid black; */
+  }
+
+  .main-content-wrapper{
+    height: auto;
+    padding: 10px;
+    /* overflow-clip-margin: border-box; */
+
+  }
+
   .cloud,
   .cloud-2, .desktop-icons, .taskbar, .drag-handle {
     display: none;
@@ -815,16 +843,6 @@ footer img {
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
-
-  .container {
-    background: none;
-    position: relative;
-    resize: none;
-    overflow: auto;
-    width: auto;
-    height: auto;
-    font-size: 1.5em;
-  }
   
   .container-work {
     width: auto;
@@ -849,22 +867,6 @@ footer img {
     inset: 0;
     border-image: none;
     pointer-events: none;
-  }
-
-  main {
-    box-sizing: border-box;
-    font-size: 23px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    overflow: auto;
-    padding: 0;
-    background-image: none;
-    /* border: 5px solid black; */
-  }
-
-  .main-content-wrapper{
-    padding: 10px;
   }
 
   .contact-info-wrapper {
@@ -953,7 +955,7 @@ footer img {
     resize: none;
     overflow: auto;
     width: auto;
-    height: auto;
+    height: auto !important;
     font-size: 1.5em;
   }
   
