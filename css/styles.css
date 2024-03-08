@@ -900,7 +900,7 @@ footer img {
 }
 
 /* landscape mode */
-@media (width >= 633px) and (330px <= height <= 735px) {
+@media (width >= 633px) and (330px <= height <= 525px) {
 
   .cloud,
   .cloud-2, .desktop-icons, .taskbar, .drag-handle {
@@ -927,7 +927,7 @@ footer img {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 5px;
+    padding: 5px 0 5px 0;
   }
 
   nav {
@@ -985,7 +985,7 @@ footer img {
   }
 
   .main-content-wrapper{
-    padding: 10px;
+    padding: 10px 0 10px 0;
   }  
 
   main {
