@@ -235,6 +235,10 @@ nav a:visited, nav a:link {
   width: 100px;
 }
 
+.ifdb-divider {
+  width: 40%;
+}
+
 .ifdb-back-btn {
   position: absolute;
   top: 15px; 
@@ -960,6 +964,10 @@ footer img {
   .ifdb-gif {
     display: none;
   }
+
+  .ifdb-divider {
+    width: 60%;
+  }
   /* ----------- */
 
   table,
@@ -1020,6 +1028,10 @@ footer img {
 
   .ifdb-back-btn {
     display: none;
+  }
+
+  .ifdb-divider {
+    width: 60%;
   }
 /* ------------- */
 
@@ -1151,6 +1163,10 @@ footer img {
   /* IFDB CASE STUDY STYLES */
   .ifdb-back-btn {
     display: none;
+  }
+
+  .ifdb-divider {
+    width: 60%;
   }
   /* ------------ */
 
