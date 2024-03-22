@@ -187,11 +187,71 @@ nav a:visited, nav a:link {
   background-image: url('../img/pink-background.gif');
 }
 
-.container-work {
+.container-wide {
   width: 80%;
   height: 69%;
   top: 0
 }
+
+/* ABOUT STYLES */
+
+.scroller-about {
+  gap: 1.5rem !important
+}
+
+.p-about {
+  margin-top: 1.5rem;
+  padding: 0 3rem;
+  text-transform: none;
+}
+
+.about-cards-wrapper {
+  text-transform: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0 2rem 0 2rem;
+}
+
+.tools-card {
+  width: fit-content;
+  padding: 10px 15px 10px 15px;
+  border: solid 2px var(--green);
+  border-radius: 10px;
+  background-color: var(--green-lighter);
+  font-weight: 100;
+  font-size: 0.9em;
+  max-width: 300px;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  color: black;
+  text-shadow: 1px 1px pink;
+  letter-spacing: 1px;
+}
+
+.tools-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.tools-card-item {
+  padding: 2.5px 5px 2.5px 5px;
+  background-color: hsl(350, 100%, 88%);
+  border: 1px solid hsl(350, 100%, 80%);
+  border-radius: 7px;
+  text-shadow: 1px 1px hsl(350, 100%, 80%);
+  color: hsl(0, 0%, 0%);
+  /* margin-right: 0.5rem; */
+}
+
+/* ABOUT STYLES END */
 
 /* IFDB STYLES */
 .container-ifdb {
@@ -468,7 +528,7 @@ main {
     box-sizing: border-box;
     margin: 0 2vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
   }
 
@@ -508,11 +568,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.32rem;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
 }
 
 .project-links img {
-  width: 28px; 
+  width: 25px; 
   margin-left: 0.75rem;
   margin-right: 0.25rem;
 }
@@ -544,11 +605,7 @@ h1 {
 }
 
 .h1-contact {
-  margin: 25px 0 15px;
-}
-
-.p-about {
-  padding: 0 20px;
+  margin: 1rem 0 0.5rem;
 }
 
 .contact-info-wrapper {
@@ -580,21 +637,29 @@ form {
 
 label {
   margin: 0.35rem 0;
+  /* font-size: 1.5rem; */
 }
 
 input {
   margin-bottom: 0.35rem;
-  padding: 0.1rem 0.15rem;
+  padding: 0.4rem 0.45rem;
   border: 1px solid black;
+  border-radius: 5px;
   width: 300px;
 }
 
 textarea {
-  height: 75px;
+  height: 65px;
   margin-bottom: 0.75rem;
-  padding: 0.1rem 0.15rem;
+  padding: 0.4rem 0.45rem;
   border: 1px solid black;
+  border-radius: 5px;
+
   width: 300px;
+  max-width: 100%;
+  min-width: 133px;
+  min-height: 50px;
+  max-height: 150px;
 }
 
 .form-element {
@@ -757,19 +822,18 @@ a:visited {
 
 input[type="submit"] {
   padding: 5px;
-  background-color: #4600F0;
+  background-color: hsl(350, 100%, 88%);
   color: white;
   text-shadow: 1px 1px #000;
-  border: solid;
-  border-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid hsl(350, 100%, 80%);
   border-radius: 5px;
-  transition: 0.005s;
+  transition: filter 0.1s;
   width: 125px;
 }
 
 input[type="submit"]:hover {
   /* transform: scale(1.1); */
-  filter: drop-shadow(0 2px 1px red) invert(75%);
+  filter: drop-shadow(0 2px 1px red) hue-rotate(90deg);
   border-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
@@ -1114,7 +1178,7 @@ footer img {
     -webkit-overflow-scrolling: touch;
   }
   
-  .container-work {
+  .container-wide {
     width: auto;
     height: auto;
     top: 0
@@ -1182,12 +1246,17 @@ footer img {
 
 /* big desktop */
 @media (width >= 1650px) {
+
+  .p-about {
+    padding: 0 5%;
+  }
+
   .ifdb-section {
-    padding: 0 20% 0 20%;
+    padding: 0 20%;
   }
 
   .ifdb-approach-section {
-    padding: 0 10% 0 10%;
+    padding: 0 10%;
   }
 
   #ifdb-img-1 {
@@ -1279,7 +1348,7 @@ footer img {
     font-size: 1.5em;
   }
   
-  .container-work {
+  .container-wide {
     width: auto;
     height: auto;
     top: 0
@@ -1321,7 +1390,7 @@ footer img {
 
 }
 
-/* grid adjustments */
+
 @media (width <= 1450px) {
   .grid-projects {
     grid-template-columns: repeat(2, 1fr);

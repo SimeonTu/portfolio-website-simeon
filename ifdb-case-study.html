@@ -186,19 +186,19 @@
 
                         <div class="scroller" data-direction="right" data-speed="medium">
                             <ul class="scroller__inner">
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/MongoDB_8bit.png"
+                                <img style="height: 64px;" src="img/logos/MongoDB_8bit.png"
                                     alt="MongoDB logo" />
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/Expressjs_8bit.png"
+                                <img style="height: 64px;" src="img/logos/Expressjs_8bit.png"
                                     alt="Express.js logo" />
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/Angular_8bit_bigger.png"
+                                <img style="height: 64px;" src="img/logos/Angular_8bit_bigger.png"
                                     alt="Angular Logo" />
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/React_8bit_bigger.png"
+                                <img style="height: 64px;" src="img/logos/React_8bit_bigger.png"
                                     alt="React logo" />
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/Node.js_8bit.png"
+                                <img style="height: 64px;" src="img/logos/Node.js_8bit.png"
                                     alt="Node.js logo" />
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/Passport_8bit.png"
+                                <img style="height: 64px;" src="img/logos/Passport_8bit.png"
                                     alt="Passport logo" />
-                                <img style="height: 64px;" src="img/ifdb-pixel-logos/SW_8bit.png" alt="Swagger logo" />
+                                <img style="height: 64px;" src="img/logos/SW_8bit.png" alt="Swagger logo" />
                             </ul>
                         </div>
 
@@ -484,34 +484,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
     <!-- scroll effect -->
-    <script>
-        const scrollers = document.querySelectorAll(".scroller");
-
-        // If a user hasn't opted in for recuded motion, then we add the animation
-        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            addAnimation();
-        }
-
-        function addAnimation() {
-            scrollers.forEach((scroller) => {
-                // add data-animated="true" to every `.scroller` on the page
-                scroller.setAttribute("data-animated", true);
-
-                // Make an array from the elements within `.scroller-inner`
-                const scrollerInner = scroller.querySelector(".scroller__inner");
-                const scrollerContent = Array.from(scrollerInner.children);
-
-                // For each item in the array, clone it
-                // add aria-hidden to it
-                // add it into the `.scroller-inner`
-                scrollerContent.forEach((item) => {
-                    const duplicatedItem = item.cloneNode(true);
-                    duplicatedItem.setAttribute("aria-hidden", true);
-                    scrollerInner.appendChild(duplicatedItem);
-                });
-            });
-        }
-    </script>
+    <script src="js/scroller.js"></script>
 
     <!-- cursor effects by https://github.com/tholman/cursor-effects -->
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
