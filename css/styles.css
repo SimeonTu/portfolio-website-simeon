@@ -584,7 +584,15 @@ header {
 
 .main-content-wrapper {
   width: 100%;
+  overflow: auto;
   /* height: 70%; */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+/* WebKit browsers (Chrome, Safari, etc.) */
+.main-content-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 main {
@@ -1534,4 +1542,117 @@ footer img {
   #nav-work {
     width: 830px;
   }
+}
+
+.scroll-indicator {
+    position: fixed;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: float 2s ease-in-out infinite;
+    z-index: 1000;
+    background: rgba(144, 238, 144, 0.6);
+    padding: 15px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: DeterminationSansWeb, sans-serif;
+    font-size: 26px;
+    color: black;
+}
+
+.arrow {
+    font-size: 28px;
+    color: black;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(-50%) translateY(-10px); }
+    50% { transform: translateY(-50%) translateY(10px); }
+}
+
+/* Hide scroll indicator when scrolling starts */
+.scroll-indicator.hidden {
+    display: none;
+}
+
+.featured-banner {
+    position: absolute;
+    top: 20px;
+    left: -35px;
+    width: 150px;
+    background-color: var(--pink-shadow);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    transform: rotate(-45deg);
+    font-family: DeterminationSansWeb, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    animation: flash 1s infinite;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.click-me {
+    position: absolute;
+    top: 20px;
+    left: -35px;
+    width: 150px;
+    text-align: center;
+    padding: 5px 0;
+    animation: flash 1s infinite;
+    z-index: 1;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.click-me-container {
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    transform: rotate(15deg);
+    z-index: 2;
+    animation: bounce 1s infinite;
+    scale: 0.7;
+}
+
+.click-me-text {
+    background: var(--pink-shadow);
+    color: white;
+    padding: 10px 20px;
+    font-family: DeterminationSansWeb, sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* Add speech bubble cone */
+.click-me-text::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid var(--pink-shadow);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: rotate(15deg) translateY(0); }
+    50% { transform: rotate(15deg) translateY(-10px); }
 }
