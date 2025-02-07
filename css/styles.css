@@ -661,6 +661,14 @@ main {
   }
 }
 
+.featured-project {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+    position: relative;
+    overflow: hidden;
+}
+
 .project-links {
   margin-top: 2.5px;
   display: flex;
@@ -1532,6 +1540,10 @@ footer img {
 }
 
 @media (width <= 1100px) {
+  .featured-project {
+    width: auto;
+  }
+
   .grid-projects {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1559,6 +1571,13 @@ footer img {
     padding: 15px 10px;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .vertical-text {
@@ -1577,11 +1596,6 @@ footer img {
 @keyframes float {
     0%, 100% { transform: translateY(-50%) translateY(-10px); }
     50% { transform: translateY(-50%) translateY(10px); }
-}
-
-/* Hide scroll indicator when scrolling starts */
-.scroll-indicator.hidden {
-    display: none;
 }
 
 .featured-banner {
