@@ -29,27 +29,15 @@
 
     <div class="desktop-icons">
         <div class="desktop">
-            <a class="icons" href="">
-                <img src="img/icons/My-Computer.ico" alt="" />
-                <span>My Computer</span>
+            <a class="icons" href="https://github.com/SimeonTu" target="_blank">
+                <img src="./img/icons/githubWhiteBg.png" alt="Link to my Github" />
+                <span>Github</span>
             </a>
         </div>
         <div class="desktop">
-            <a class="icons" href="">
-                <img src="img/icons/Calculator.ico" alt="" />
-                <span>Calculator</span>
-            </a>
-        </div>
-        <div class="desktop">
-            <a class="icons" href="">
-                <img src="img/icons/Notepad.ico" alt="" />
-                <span>Notepad</span>
-            </a>
-        </div>
-        <div class="desktop">
-            <a class="icons" href="">
-                <img src="img/icons/Empty-Recycle-Bin.ico" alt="" />
-                <span>Recycle Bin</span>
+            <a class="icons" href="https://www.linkedin.com/in/simeon-tudzharov/" target="_blank">
+                <img src="img/icons/linkedin.png" alt="Link to my Linkedin" />
+                <span>Linkedin</span>
             </a>
         </div>
     </div>
@@ -90,10 +78,16 @@
                         <div class="featured-banner">FEATURED</div>
                         <h2 class="grid-title">EventfullSunday</h2>
                         <a target="_blank" href="https://eventfullsunday.co.uk/">
-                            <img class="fakeimg" style="aspect-ratio: 16/9; object-fit: cover;" src="img/eventfull.png" alt="EventfullSunday home page">
+                            <img class="fakeimg" style="aspect-ratio: 16/9; object-fit: cover;" src="img/eventfull.png"
+                                alt="EventfullSunday home page">
                         </a>
                         <p class="grid-description">
-                            A full-stack event management platform where I led frontend development using React and Redux. I implemented key features including Google services integration (Maps, Calendar, Analytics), user authentication with email verification, Redux state persistence, and a comprehensive ticket management system. The platform was built with a focus on mobile responsiveness and user experience, utilizing Tailwind CSS for styling and Node.js for backend integration.
+                            A full-stack event management platform where I led frontend development using React and
+                            Redux. I implemented key features including Google services integration (Maps, Calendar,
+                            Analytics), user authentication with email verification, Redux state persistence, and a
+                            comprehensive ticket management system. The platform was built with a focus on mobile
+                            responsiveness and user experience, utilizing Tailwind CSS for styling and Node.js for
+                            backend integration.
                         </p>
 
                         <div class="project-links">
@@ -250,19 +244,59 @@
                         </div>
                     </div>
 
+                    <!-- Tampermonkey Spotify Extension -->
+                    <div class="grid-item">
+                        <h2 class="grid-title">Spotify User Ratings Extension</h2>
+                        <div class="image-container">
+                            <img class="fakeimg" src="img/tampermonkey-spotify-extension.jpeg"
+                                alt="Tampermonkey Spotify Extension">
+                        </div>
+                        <p class="grid-description">A Tampermonkey script that automatically pulls user ratings from
+                            Album of The Year (AOTY) and displays them directly on Spotify album pages. The rating color
+                            smoothly transitions from red to yellow to green based on the score. It's a convenient way
+                            to quickly see how albums and tracks are rated without having to leave
+                            Spotify.</p>
+
+                        <div class="project-links">
+                            <a target="_blank" class="project-links"
+                                href="https://github.com/SimeonTu/tampermonkey-scripts/tree/main/spotify-ratings-injector">
+                                <img src="./img/github.png" alt="Github Link">
+                                <span class="hvr-pulse-grow">Github</span>
+                            </a>
+                            <a target="_blank" class="project-links"
+                                href="https://github.com/SimeonTu/tampermonkey-scripts/raw/refs/heads/main/spotify-ratings-injector/spotify-ratings-injector.user.js">
+                                <img src="./img/link.svg" alt="Script Link">
+                                <span class="hvr-pulse-grow">Tampermonkey Script</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- eBay Price Tracker -->
+                    <div class="grid-item">
+                        <h2 class="grid-title">eBay Price Tracker</h2>
+                        <div class="image-container">
+                            <img class="fakeimg ebay" src="img/ebay-script.jpeg" alt="eBay Price Tracker Script">
+                        </div>
+                        <p class="grid-description">
+                            A Python script for tracking price trends on eBay by scraping recently sold listings based
+                            on user-defined criteria. It calculates key statistics like mean, median, and range of
+                            prices, providing a quick snapshot of the market. Perfect for doing research before making informed buying or selling
+                            decisions.
+                        </p>
+
+                        <div class="project-links">
+                            <a target="_blank" class="project-links"
+                                href="https://github.com/SimeonTu/ebay-price-tracker">
+                                <img src="./img/github.png" alt="Github Link">
+                                <span class="hvr-pulse-grow">Github</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
-                <footer>
-                    <p>
-                        Find me on
-                    </p>
-                    <div>
-                        <a href="https://github.com/SimeonTu" target="_blank"><img src="./img/footer/github.png"
-                                style="width: 30px;" alt="Github Link"></a>
-                        <a href="https://www.linkedin.com/in/simeon-tudzharov-b5155b16b/" target="_blank"><img
-                                src="./img/footer/linkedin.png" style="width: 30px;" alt="Linkedin Link"></a>
-                    </div>
-                </footer>
             </div>
         </main>
 
@@ -270,7 +304,10 @@
 
     <div class="taskbar">
         <a href="index.html">
-            <div id="start" style="cursor: pointer;" class="start-rest">Start</div>
+            <div id="start" style="cursor: pointer;" class="start-rest">
+                <img src="img/win95icon.png" width="17px" height="15px" style="margin-right: 4px;" />
+                Start
+            </div>
         </a>
         <div class="task">Projects</div>
     </div>
