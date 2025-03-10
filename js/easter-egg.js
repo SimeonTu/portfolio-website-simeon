@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let secretEggFound = localStorage.getItem("secretEggFound") === "true" || false;
     let scrollerEggFound = localStorage.getItem("scrollerEggFound") === "true" || false;
     let eggCount = parseInt(localStorage.getItem("eggCount")) || 0; // Track the number of eggs found
-    const maxEggs = document.body.clientWidth <= 1030 ? 2 : document.body.clientWidth <= 1550 ? 3 : 4; // Maximum number of eggs depending on available screen width
+    const maxEggs = document.body.clientWidth <= 633 ? 1 :document.body.clientWidth <= 1030 ? 2 : document.body.clientWidth <= 1550 ? 3 : 4; // Maximum number of eggs depending on available screen width
 
     // Get the initial position of the container
     const initialRect = container.getBoundingClientRect();

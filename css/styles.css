@@ -1248,8 +1248,7 @@ footer img {
 
 /* screen too small warning */
 @media screen and (width <= 325px), (height <= 330px) {
-  .secret,
-  .scoreboard {
+  .secret, .scoreboard {
     display: none;
   }
 
@@ -1288,9 +1287,14 @@ footer img {
 
 /* small mobile */
 @media (326px <= width <= 425px) and (330px <= height) {
-  .secret,
-  .scoreboard {
+  .secret {
     display: none;
+  }
+
+  .scoreboard {
+    top: unset;
+    bottom: 30px;
+    z-index: 9999;
   }
 
   /* COOKIE CASE STUDY STYLES */
@@ -1335,9 +1339,15 @@ footer img {
 
 /* medium mobile */
 @media (width <= 632px) and (330px <= height) {
-  .secret,
-  .scoreboard {
+
+  .secret {
     display: none;
+  }
+
+  .scoreboard {
+    top: unset;
+    bottom: 30px;
+    z-index: 9999;
   }
 
   /* DEV EVENTS CASE STUDY FILES */
@@ -1615,11 +1625,16 @@ footer img {
 
 /* landscape mode */
 @media (width >= 633px) and (330px <= height <= 525px) {
-  .secret,
-  .scoreboard {
+  .secret {
     display: none;
   }
 
+  .scoreboard {
+    top: unset;
+    bottom: 30px;
+    z-index: 9999;
+  }
+  
   .cloud,
   .cloud-2,
   .desktop-icons,
