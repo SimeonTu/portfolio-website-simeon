@@ -40,6 +40,13 @@
                 <span>Linkedin</span>
             </a>
         </div>
+
+        <div class="desktop">
+            <div id="secret-folder" class="icons">
+                <img src="img/icons/folder.png" alt="Do NOT open!!!!" />
+                <span>Top Secret</span>
+            </div>
+        </div>
     </div>
 
     <div class="cloud">
@@ -99,6 +106,10 @@
                             <img style="height: 64px;" src="img/logos/Passport_8bit.png" alt="Passport logo" />
                             <img style="height: 64px;" src="img/logos/SW_8bit.png" alt="Swagger logo" />
                             <img style="height: 64px;" src="img/logos/heroku.png" alt="Heroku logo" />
+
+                            <!-- SECRET EGG!! -->
+                            <img id="scroller-egg" style="height: 64px;" src="img/creme-egg.png" alt="Easter Egg" />
+
                         </ul>
                     </div>
 
@@ -129,6 +140,9 @@
                             <div class="tools-wrapper">
                                 <span class="tools-card-item">
                                     React/Redux
+                                </span>
+                                <span class="tools-card-item">
+                                    Vue.js
                                 </span>
                                 <span class="tools-card-item">
                                     Angular
@@ -264,13 +278,11 @@
     </div>
 
     <div class="taskbar">
-        <a href="index.html">
-            <div id="start" style="cursor: pointer;" class="start-rest">
-                <img src="img/win95icon.png" width="17px" height="15px" style="margin-right: 4px;" />
-                Start
-            </div>
-        </a>
-        <div class="task">Welcome</div>
+        <div id="start" style="cursor: pointer;" class="start-rest">
+            <img src="img/win95icon.png" width="17px" height="15px" style="margin-right: 4px;" />
+            Start
+        </div>
+        <div class="task">About</div>
     </div>
 
     <div class="size-warning">
@@ -309,11 +321,17 @@
     <script src="js/snowflakes.js"></script>
 
     <!-- draggable window -->
-    <script src="js/draggable.js"></script>
+    <!-- <script src="js/draggable.js"></script> -->
 
     <!-- text wobble -->
     <script src="js/textWobble.js"></script>
     <!-- <script src="js/tota11y.min.js"></script> temporarily disabled -->
+
+    <!-- Confetti -->
+    <script src="js/confetti.browser.min.js"></script>
+
+    <!-- 🥚 -->
+    <script src="js/easter-egg.js"></script>
 
 </body>
 

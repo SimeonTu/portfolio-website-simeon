@@ -16,7 +16,7 @@
 
 $(function () {
     $(".draggable").draggable({
-        stack: ".draggable", handle: ".drag-handle",
+        stack: ".draggable", handle: ".drag-handle", containment: "window",
         start: function () {
             $(".draggable").css("transform","translate(0,0)");
         }
