@@ -152,6 +152,7 @@ nav a {
   text-decoration: none;
   /* width: 75px;
   height: 75px; */
+  color: white;
 }
 
 a:link {
@@ -588,6 +589,10 @@ header {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge */
   padding-bottom: 20px;
+}
+
+.main-about {
+  overflow: visible;
 }
 
 /* WebKit browsers (Chrome, Safari, etc.) */
@@ -1098,6 +1103,7 @@ a:visited {
 
 .desktop-icons {
   display: block;
+  z-index: 9000;
 }
 
 .size-warning {
