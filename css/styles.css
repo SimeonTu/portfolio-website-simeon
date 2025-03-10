@@ -580,10 +580,10 @@ header {
   display: flex;
   /* justify-content: center;  
   align-items: center;      */
-  height: 100vh;
+  height: auto;
   width: 100%;
   flex-direction: column;
-  overflow: auto;
+  overflow: visible;
   /* height: 70%; */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge */
@@ -949,7 +949,7 @@ a:visited {
   text-decoration: underline;
 }
 
-input[type="submit"] {
+.main-button {
   padding: 5px;
   background-color: hsl(350, 100%, 88%);
   color: white;
@@ -960,14 +960,14 @@ input[type="submit"] {
   width: 125px;
 }
 
-input[type="submit"]:hover {
+.main-button:hover {
   /* transform: scale(1.1); */
   filter: drop-shadow(0 2px 1px red) hue-rotate(90deg);
   border-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
-input[type="submit"]:active {
+.main-button:active {
   background-color: red;
 }
 
@@ -1123,9 +1123,88 @@ footer img {
   transform: translate(-50%, -50%);
 }
 
+#scroller-egg {
+  cursor: pointer;
+  z-index: 1000;
+  position: relative;
+}
+
+#secret-folder {
+  cursor: pointer;
+}
+
+#secret-folder:hover {
+  text-decoration: underline;
+}
+
+/* Scoreboard styles */
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(
+    69,
+    24,
+    80,
+    0.5
+  ); /* Semi-transparent black background */
+  color: white; /* Black text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-in-out;
+  text-shadow: 0.75px 0.75px var(--pink-shadow); /* Pink text shadow */
+}
+
+/* Define the --pink-shadow variable */
+:root {
+  --pink-shadow: #ff69b4; /* Pink color for the shadow */
+}
+
+/* Fade-in animation for the scoreboard */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the scoreboard when it becomes visible */
+.scoreboard.visible {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Start menu egg image styles */
+.start-menu-egg {
+  position: fixed;
+  bottom: 33px;
+  left: 22px;
+  width: 150px;
+  height: auto;
+  z-index: 10; /* Ensure it's above other elements */
+  display: none; /* Start hidden */
+  scale: 1.3;
+}
+
 /* media queries */
 /* screen too small warning */
 @media screen and (width <= 325px), (height <= 330px) {
+  .secret,
+  .scoreboard {
+    display: none;
+  }
+
   /* .body {
     background-image: none;
   } */
@@ -1161,6 +1240,11 @@ footer img {
 
 /* small mobile */
 @media (326px <= width <= 425px) and (330px <= height) {
+  .secret,
+  .scoreboard {
+    display: none;
+  }
+
   /* COOKIE CASE STUDY STYLES */
 
   /* ----------- */
@@ -1203,6 +1287,11 @@ footer img {
 
 /* medium mobile */
 @media (width <= 632px) and (330px <= height) {
+  .secret,
+  .scoreboard {
+    display: none;
+  }
+
   /* DEV EVENTS CASE STUDY FILES */
   #dev-events-body {
     background-image: url("../img/wp24.gif");
@@ -1463,6 +1552,11 @@ footer img {
 
 /* landscape mode */
 @media (width >= 633px) and (330px <= height <= 525px) {
+  .secret,
+  .scoreboard {
+    display: none;
+  }
+
   .cloud,
   .cloud-2,
   .desktop-icons,
