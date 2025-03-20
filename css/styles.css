@@ -49,7 +49,7 @@ body {
   position: absolute;
   right: 25px;
   top: 100px;
-  animation: cloud-move 70s infinite alternate linear;
+  /* animation: cloud-move 70s infinite alternate linear; */
 }
 
 .cloud img {
@@ -61,7 +61,7 @@ body {
   position: fixed;
   left: 25px;
   bottom: 500px;
-  animation: cloud-move-2 70s infinite alternate linear;
+  /* animation: cloud-move-2 70s infinite alternate linear; */
 }
 
 .cloud-2 img {
