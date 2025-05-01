@@ -94,6 +94,16 @@ body {
   color: rgb(0, 0, 0);
   text-shadow: 2px 2px var(--pink-shadow);
   height: 110px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text span {
+  line-height: 1;
+  display: inline-block;
+  height: 150px;
+  overflow: visible;
 }
 
 .logo-div {
@@ -560,18 +570,24 @@ nav a:link {
   padding: 132px 0 40px;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  border: 0;
+  border-image: url("../img/netscape.png") 171 57 57 515 / 170px 56px 57px 515px;
+  -webkit-border-image: url("../img/netscape.png") 171 57 57 515 / 170px 56px 57px 515px;
   border-image-slice: 171 57 57 515 fill;
+  -webkit-border-image-slice: 171 57 57 515 fill;
+  border-image-width: 170px 56px 57px 515px;
+  -webkit-border-image-width: 170px 56px 57px 515px;
+  border-image-outset: 0;
+  -webkit-border-image-outset: 0;
+  border-image-repeat: stretch;
+  -webkit-border-image-repeat: stretch;
 }
 
 .browser-frame::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-image: url("../img/netscape.png");
-  border-image-slice: 171 57 57 515 fill;
-  border-image-width: 170px 56px 57px 515px;
-  border-image-outset: 0 0 0 0;
-  border-image-repeat: repeat repeat;
+  border: 0;
   pointer-events: none;
 }
 
@@ -1509,14 +1525,15 @@ footer img {
     padding: 0;
     overflow: hidden;
     box-shadow: none;
-    border-image-slice: 0;
+    border: 0;
+    background-image: none;
   }
 
   .browser-frame::before {
     content: "";
     position: relative;
     inset: 0;
-    border-image: none;
+    background-image: none;
     pointer-events: none;
   }
 
@@ -1714,14 +1731,15 @@ footer img {
     padding: 0;
     overflow: auto;
     box-shadow: none;
-    border-image-slice: 0;
+    border: 0;
+    background-image: none;
   }
 
   .browser-frame::before {
     content: "";
     position: relative;
     inset: 0;
-    border-image: none;
+    background-image: none;
     pointer-events: none;
   }
 
